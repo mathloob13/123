@@ -9,9 +9,7 @@ output  valid_out_0,valid_out_1,valid_out_2,busy,error;
 wire [2:0] write_enb;
 wire  empty_0,empty_1,empty_2;
 wire  full_0,full_1,full_2;
-/*wire  soft_reset_0,soft_reset_1,soft_reset_2;
-wire  fifo_full,detect_add,ld_state,laf_state,full_state,lfd_state;
-wire  rst_int_reg,parity_done,low_packet_valid,write_enb_reg;*/
+
 wire [7:0] data_out;
 
 router_fifo FIFO_0( .clk(clk),
