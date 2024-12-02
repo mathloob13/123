@@ -114,34 +114,8 @@ router_fifo FIFO_2( .clk(clk),
                        .err(error),
                        .data_out(data_out) );
    
-/*	property p1;
-		@(posedge clock) pkt_valid |=> busy;
-	endproperty
-	
-	property p2;
-		@(posedge clock) busy |=> $stable(data_in);
-	endproperty
-	
-	property p3;
-		@(posedge clock) valid_out |-> ##[0:29] read_enb;
-	endproperty
-	
-	property p4;
-		@(posedge clock) pkt_valid |-> ##3 valid_out;
-	endproperty
-	
-	property p5;
-		@(posedge clock) !valid_out |=> !read_enb;
-	endproperty
-	
-	A1 : assert property (p1);
-	A2 : assert property (p2);
-	A3 : assert property (p3);
-	A4 : assert property (p4);
-	A5 : assert property (p5);
-		
- */
- 
+
+   
  
 	property p1;
 			@(posedge clk)  $rose(src_inf.pkt_valid) |=> $rose(src_inf.busy);
